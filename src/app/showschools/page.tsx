@@ -43,7 +43,7 @@ const ShowSchoolsPage: React.FC = () => {
           All Registered Schools
         </h2>
         <p className="text-lg text-gray-500 text-center mb-10">
-          Browse our list of educational institutions.
+          Browse our list of educational institutions from all around the world.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
