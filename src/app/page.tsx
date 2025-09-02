@@ -80,7 +80,7 @@ const HomePage = () => {
                 <section id="contact" className="container mx-auto p-8 py-12 text-center">
                     <h3 className="text-3xl font-bold text-gray-900 mb-4">Contact Us</h3>
                     <p className="text-lg text-gray-500 mb-8 max-w-xl mx-auto">
-                        We'd love to hear from you. Follow us on our social media to stay updated.
+                        We would love to hear from you. Follow us on our social media to stay updated.
                     </p>
                     <a href="https://x.com/tushar_nerd" target="_blank" rel="noopener noreferrer" className="inline-flex items-center space-x-2 bg-indigo-600 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-indigo-700 transition-colors">
                         <span>Follow us on X</span>

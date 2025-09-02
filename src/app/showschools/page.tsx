@@ -1,5 +1,6 @@
 "use client"
 import React from 'react';
+import Image from 'next/image';
 import { MapPinIcon, DocumentTextIcon } from '@heroicons/react/24/outline';
 import { useQuery } from 'convex/react';
 import { api } from '../../../convex/_generated/api';
@@ -49,7 +50,7 @@ const ShowSchoolsPage: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {schools.map((school) => (
             <div key={school._id} className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-2xl duration-300">
-              <img src={school.image} alt={school.name} className="w-full h-48 object-cover" />
+              <Image src={school.image} alt={school.name} className="w-full h-48 object-cover" />
               <div className="p-5">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{school.name}</h3>
                 <div className="flex items-center text-gray-500 text-sm mb-1">

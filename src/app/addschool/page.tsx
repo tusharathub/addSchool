@@ -1,18 +1,28 @@
 "use client";
 
 import { AcademicCapIcon, MapPinIcon, PhoneIcon, EnvelopeIcon, DocumentTextIcon, PhotoIcon } from '@heroicons/react/24/outline';
-
 import { useForm } from "react-hook-form";
 import { useMutation } from "convex/react";
 import { api } from "../../../convex/_generated/api";
 import { useState } from "react";
 
+type FormData = {
+  name: string;
+  address: string;
+  city: string;
+  state: string;
+  contact_number: string;
+  email_id: string;
+  image: FileList;
+};
+
 export default function AddSchool() {
-  const { register, handleSubmit, formState: { errors }, reset } = useForm();
+  const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>();
+
   const addSchool = useMutation(api.school.addSchools);
   const [message, setMessage] = useState("");
 
-  const onSubmit = async (data: any) => {
+  const onSubmit = async (data: FormData) => {
     const file = data.image[0];
     const imageUrl = URL.createObjectURL(file);
 
